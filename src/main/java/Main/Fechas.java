@@ -7,7 +7,6 @@ import java.util.Scanner;
 
 public class Fechas {
     public static void main(String[] args) {
-        pedirFecha();
         ejemploFecha();
     }
 
@@ -19,8 +18,11 @@ public class Fechas {
         System.out.println("Fecha de hoy: " + fecha);
 
         // para darle formato
+        //en este caso esta en dia,mes y año
         SimpleDateFormat formatoFecha = new SimpleDateFormat("dd MMMM, yyyy");
         String fechaFormateada = formatoFecha.format(fecha);
+
+        //mostramos la fecha con el formato
         System.out.println("Fecha con nuevo formato: " + fechaFormateada);
     }
 

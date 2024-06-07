@@ -7,11 +7,11 @@ import java.util.Date;
 public class EjemploCalendar {
     public static void main(String[] args) {
         System.out.println("==CLASE CALENDAR==");
-        compararFechasTipoCalendar();
+        ejemploFecha();
     }
 
     public static void ejemploFecha() {
-        // creamos la inastancia
+        // creamos la instancia
         Calendar calendario = Calendar.getInstance();
 
         // le establecemos la fecha
@@ -25,7 +25,7 @@ public class EjemploCalendar {
         // creamos la inastancia
         Calendar calendario = Calendar.getInstance();
 
-        // le establecemos la fecha con hora,minutos,segundos
+        // le establecemos la fecha con año,mes,dia, hora,minutos,segundos
         calendario.set(2006, 1, 8, 5, 20, 10);
         Date fecha = calendario.getTime();
         // System.out.println(calendario.toString());
