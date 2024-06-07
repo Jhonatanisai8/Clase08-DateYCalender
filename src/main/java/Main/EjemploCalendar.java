@@ -43,14 +43,17 @@ public class EjemploCalendar {
         calendario.set(Calendar.YEAR, 2020);
         calendario.set(Calendar.MONTH, Calendar.FEBRUARY);
         calendario.set(Calendar.DAY_OF_MONTH, 25);
-        calendario.set(Calendar.HOUR_OF_DAY, 21);
+        // calendario.set(Calendar.HOUR_OF_DAY, 21);
+        calendario.set(Calendar.HOUR, 6);
+        calendario.set(Calendar.AM_PM, Calendar.PM);
+
         calendario.set(Calendar.MINUTE, 24);
         calendario.set(Calendar.SECOND, 10);
         calendario.set(Calendar.MILLISECOND, 125);
         Date fecha = calendario.getTime();
         // System.out.println(calendario.toString());
         System.out.println("Fecha sin formato: " + fecha);
-        SimpleDateFormat formatoFecha = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
+        SimpleDateFormat formatoFecha = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS a");
         String fechaFormateada = formatoFecha.format(fecha);
         System.out.println("Fecha con formato: " + fechaFormateada);
 
