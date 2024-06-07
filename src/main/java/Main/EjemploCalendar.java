@@ -45,7 +45,7 @@ public class EjemploCalendar {
         calendario.set(Calendar.DAY_OF_MONTH, 25);
         // calendario.set(Calendar.HOUR_OF_DAY, 21);
         calendario.set(Calendar.HOUR, 6);
-        calendario.set(Calendar.AM_PM, Calendar.PM);
+        calendario.set(Calendar.AM_PM, Calendar.PM);// puede variar ya sea AM o PM
 
         calendario.set(Calendar.MINUTE, 24);
         calendario.set(Calendar.SECOND, 10);
