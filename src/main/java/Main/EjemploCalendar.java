@@ -46,11 +46,11 @@ public class EjemploCalendar {
         calendario.set(Calendar.HOUR_OF_DAY, 21);
         calendario.set(Calendar.MINUTE, 24);
         calendario.set(Calendar.SECOND, 10);
-        
+        calendario.set(Calendar.MILLISECOND, 125);
         Date fecha = calendario.getTime();
         // System.out.println(calendario.toString());
         System.out.println("Fecha sin formato: " + fecha);
-        SimpleDateFormat formatoFecha = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat formatoFecha = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
         String fechaFormateada = formatoFecha.format(fecha);
         System.out.println("Fecha con formato: " + fechaFormateada);
 
