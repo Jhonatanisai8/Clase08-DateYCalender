@@ -10,7 +10,7 @@ public class ConvetirStringADate {
 
     public static void main(String[] args) {
         System.out.println("==CONVERTIR FECHA de STRING a DATE==");
-        convetirFechaIngresada();
+        mayorDeDosFechas();
     }
 
     public static void convetirFecha() {
@@ -41,6 +41,37 @@ public class ConvetirStringADate {
             fecha = formatoFecha.parse(fechaIngresada);
             System.out.println("Fecha sin formato: " + fecha);
             System.out.println("Fecha con formato: " + formatoFecha.format(fecha));
+
+        } catch (ParseException e) {
+            System.out.println("Error: " + e.toString());
+        }
+    }
+
+    // metodo para saber cual de dos fechas es mayor
+    public static void mayorDeDosFechas() {
+        // instanciamos
+        SimpleDateFormat formatoFecha = new SimpleDateFormat("yyyy-MM-dd");
+        // SimpleDateFormat formatoFecha = new SimpleDateFormat("dd-MM-yyyy");
+
+        // pedimos la fecha
+        System.out.println("Ingrese la fecha (yyyy-MM-dd)");
+        String fechaIngresada = leer.next();
+        Date fecha;
+        try {
+            fecha = formatoFecha.parse(fechaIngresada);
+            System.out.println("Fecha sin formato: " + fecha);
+            System.out.println("Fecha con formato: " + formatoFecha.format(fecha));
+
+            // fecha para comparar
+            Date nuevaActual = new Date();
+            System.out.println("Fecha actual : " + nuevaActual);
+            if (fecha.after(nuevaActual)) {
+                System.out.println("Fecha del usuario es despues de la fecha 2");
+            } else if (fecha.before(nuevaActual)) {
+                System.out.println("fecha es anteior que la fecha 2");
+            } else if (fecha.equals(nuevaActual)) {
+                System.out.println("las fechas iguales");
+            }
         } catch (ParseException e) {
             System.out.println("Error: " + e.toString());
         }
